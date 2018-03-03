@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F59204A53EC0010657B /* AppDelegate.swift */; };
+		37088F5C204A53EC0010657B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F5B204A53EC0010657B /* ViewController.swift */; };
+		37088F5F204A53EC0010657B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F5D204A53EC0010657B /* Main.storyboard */; };
+		37088F61204A53EC0010657B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37088F60204A53EC0010657B /* Assets.xcassets */; };
+		37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F62204A53EC0010657B /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37088F56204A53EC0010657B /* alzheimer-tcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alzheimer-tcc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37088F59204A53EC0010657B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		37088F5B204A53EC0010657B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37088F5E204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37088F60204A53EC0010657B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37088F63204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		37088F65204A53EC0010657B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		37088F53204A53EB0010657B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		37088F4D204A53EB0010657B = {
+			isa = PBXGroup;
+			children = (
+				37088F58204A53EC0010657B /* alzheimer-tcc */,
+				37088F57204A53EC0010657B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		37088F57204A53EC0010657B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				37088F56204A53EC0010657B /* alzheimer-tcc.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		37088F58204A53EC0010657B /* alzheimer-tcc */ = {
+			isa = PBXGroup;
+			children = (
+				37088F59204A53EC0010657B /* AppDelegate.swift */,
+				37088F5B204A53EC0010657B /* ViewController.swift */,
+				37088F5D204A53EC0010657B /* Main.storyboard */,
+				37088F60204A53EC0010657B /* Assets.xcassets */,
+				37088F62204A53EC0010657B /* LaunchScreen.storyboard */,
+				37088F65204A53EC0010657B /* Info.plist */,
+			);
+			path = "alzheimer-tcc";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		37088F55204A53EB0010657B /* alzheimer-tcc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37088F68204A53EC0010657B /* Build configuration list for PBXNativeTarget "alzheimer-tcc" */;
+			buildPhases = (
+				37088F52204A53EB0010657B /* Sources */,
+				37088F53204A53EB0010657B /* Frameworks */,
+				37088F54204A53EB0010657B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "alzheimer-tcc";
+			productName = "alzheimer-tcc";
+			productReference = 37088F56204A53EC0010657B /* alzheimer-tcc.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		37088F4E204A53EB0010657B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Amanda Campos";
+				TargetAttributes = {
+					37088F55204A53EB0010657B = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 55Z8HFH9WB;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 37088F51204A53EB0010657B /* Build configuration list for PBXProject "alzheimer-tcc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 37088F4D204A53EB0010657B;
+			productRefGroup = 37088F57204A53EC0010657B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				37088F55204A53EB0010657B /* alzheimer-tcc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		37088F54204A53EB0010657B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */,
+				37088F61204A53EC0010657B /* Assets.xcassets in Resources */,
+				37088F5F204A53EC0010657B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37088F52204A53EB0010657B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37088F5C204A53EC0010657B /* ViewController.swift in Sources */,
+				37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		37088F5D204A53EC0010657B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37088F5E204A53EC0010657B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37088F62204A53EC0010657B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37088F63204A53EC0010657B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		37088F66204A53EC0010657B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		37088F67204A53EC0010657B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		37088F69204A53EC0010657B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 55Z8HFH9WB;
+				INFOPLIST_FILE = "alzheimer-tcc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.br.amandacampos.alzheimer-tcc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		37088F6A204A53EC0010657B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 55Z8HFH9WB;
+				INFOPLIST_FILE = "alzheimer-tcc/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.br.amandacampos.alzheimer-tcc";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		37088F51204A53EB0010657B /* Build configuration list for PBXProject "alzheimer-tcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37088F66204A53EC0010657B /* Debug */,
+				37088F67204A53EC0010657B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37088F68204A53EC0010657B /* Build configuration list for PBXNativeTarget "alzheimer-tcc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37088F69204A53EC0010657B /* Debug */,
+				37088F6A204A53EC0010657B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 37088F4E204A53EB0010657B /* Project object */;
+}
