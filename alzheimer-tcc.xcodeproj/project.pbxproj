@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F59204A53EC0010657B /* AppDelegate.swift */; };
-		37088F5C204A53EC0010657B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F5B204A53EC0010657B /* ViewController.swift */; };
+		37088F5C204A53EC0010657B /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F5B204A53EC0010657B /* mainViewController.swift */; };
 		37088F5F204A53EC0010657B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F5D204A53EC0010657B /* Main.storyboard */; };
-		37088F61204A53EC0010657B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37088F60204A53EC0010657B /* Assets.xcassets */; };
 		37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F62204A53EC0010657B /* LaunchScreen.storyboard */; };
+		37088F6D204BB7F50010657B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37088F6B204BB7F50010657B /* Assets.xcassets */; };
+		37889F152058BB2400389D80 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37889F142058BB2400389D80 /* GradientView.swift */; };
+		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
+		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37088F56204A53EC0010657B /* alzheimer-tcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "alzheimer-tcc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37088F59204A53EC0010657B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37088F5B204A53EC0010657B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37088F5B204A53EC0010657B /* mainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainViewController.swift; sourceTree = "<group>"; };
 		37088F5E204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		37088F60204A53EC0010657B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37088F63204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37088F65204A53EC0010657B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37088F6B204BB7F50010657B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37889F142058BB2400389D80 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
+		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		37088F58204A53EC0010657B /* alzheimer-tcc */ = {
 			isa = PBXGroup;
 			children = (
-				37088F59204A53EC0010657B /* AppDelegate.swift */,
-				37088F5B204A53EC0010657B /* ViewController.swift */,
-				37088F5D204A53EC0010657B /* Main.storyboard */,
-				37088F60204A53EC0010657B /* Assets.xcassets */,
+				37289909206676B200CBD346 /* Supporting Files */,
+				37C79A8A204C327C00D35D0B /* ViewController */,
+				37C79A8F204C686D00D35D0B /* Resources */,
 				37088F62204A53EC0010657B /* LaunchScreen.storyboard */,
-				37088F65204A53EC0010657B /* Info.plist */,
 			);
 			path = "alzheimer-tcc";
+			sourceTree = "<group>";
+		};
+		37289909206676B200CBD346 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				37088F65204A53EC0010657B /* Info.plist */,
+				37088F5D204A53EC0010657B /* Main.storyboard */,
+				37088F59204A53EC0010657B /* AppDelegate.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37C79A8A204C327C00D35D0B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				37088F5B204A53EC0010657B /* mainViewController.swift */,
+				37C79A8B204C330E00D35D0B /* levelViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		37C79A8F204C686D00D35D0B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37C79A8D204C686600D35D0B /* DesignableView.swift */,
+				37088F6B204BB7F50010657B /* Assets.xcassets */,
+				37889F142058BB2400389D80 /* GradientView.swift */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */,
-				37088F61204A53EC0010657B /* Assets.xcassets in Resources */,
+				37088F6D204BB7F50010657B /* Assets.xcassets in Resources */,
 				37088F5F204A53EC0010657B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37088F5C204A53EC0010657B /* ViewController.swift in Sources */,
+				37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */,
+				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
+				37889F152058BB2400389D80 /* GradientView.swift in Sources */,
 				37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */,
+				37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +338,7 @@
 				37088F6A204A53EC0010657B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
