@@ -12,6 +12,8 @@
 		37088F5F204A53EC0010657B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F5D204A53EC0010657B /* Main.storyboard */; };
 		37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F62204A53EC0010657B /* LaunchScreen.storyboard */; };
 		37088F6D204BB7F50010657B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37088F6B204BB7F50010657B /* Assets.xcassets */; };
+		3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990A2066C91000CBD346 /* createGameViewController.swift */; };
+		3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */; };
 		37889F152058BB2400389D80 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37889F142058BB2400389D80 /* GradientView.swift */; };
 		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
 		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
@@ -25,6 +27,8 @@
 		37088F63204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37088F65204A53EC0010657B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37088F6B204BB7F50010657B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3728990A2066C91000CBD346 /* createGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGameViewController.swift; sourceTree = "<group>"; };
+		3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosViewController.swift; sourceTree = "<group>"; };
 		37889F142058BB2400389D80 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
 		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 			children = (
 				37088F5B204A53EC0010657B /* mainViewController.swift */,
 				37C79A8B204C330E00D35D0B /* levelViewController.swift */,
+				3728990A2066C91000CBD346 /* createGameViewController.swift */,
+				3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -130,6 +136,7 @@
 					37088F55204A53EB0010657B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 55Z8HFH9WB;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -172,9 +179,11 @@
 			files = (
 				37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
+				3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */,
 				37889F152058BB2400389D80 /* GradientView.swift in Sources */,
 				37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */,
 				37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */,
+				3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,7 +311,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.br.amandacampos.alzheimer-tcc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -315,7 +325,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.br.amandacampos.alzheimer-tcc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

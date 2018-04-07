@@ -10,7 +10,6 @@ import UIKit
 
 class levelViewController: UIViewController {
     
-    
     @IBAction func back_button(_ sender: Any) {
         self.navigationController?.popViewController(animated: true);
     }
@@ -24,7 +23,5 @@ class levelViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 
