@@ -15,6 +15,7 @@
 		3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990A2066C91000CBD346 /* createGameViewController.swift */; };
 		3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */; };
 		37889F152058BB2400389D80 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37889F142058BB2400389D80 /* GradientView.swift */; };
+		37B8DF972079B48F00571218 /* addedInfosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */; };
 		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
 		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		3728990A2066C91000CBD346 /* createGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGameViewController.swift; sourceTree = "<group>"; };
 		3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosViewController.swift; sourceTree = "<group>"; };
 		37889F142058BB2400389D80 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosCollectionViewCell.swift; sourceTree = "<group>"; };
 		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
 		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,9 +84,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		37B8DF952079B43D00571218 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */,
+			);
+			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		37C79A8A204C327C00D35D0B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				37B8DF952079B43D00571218 /* CollectionViewCell */,
 				37088F5B204A53EC0010657B /* mainViewController.swift */,
 				37C79A8B204C330E00D35D0B /* levelViewController.swift */,
 				3728990A2066C91000CBD346 /* createGameViewController.swift */,
@@ -178,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */,
+				37B8DF972079B48F00571218 /* addedInfosCollectionViewCell.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
 				3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */,
 				37889F152058BB2400389D80 /* GradientView.swift in Sources */,

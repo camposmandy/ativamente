@@ -10,7 +10,7 @@ import UIKit
 
 class createGameViewController: UIViewController {
     
-    private var _numberCards = 2
+    private var _numberCards: Int = 2
 
     @IBOutlet weak var numberCards_button: ACButton!
     
@@ -30,5 +30,12 @@ class createGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let addedInfosVC = segue.destination as? addedInfosViewController {
+            addedInfosVC.totalCards = _numberCards
+        }
     }
 }
