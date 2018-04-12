@@ -8,35 +8,31 @@
 
 import UIKit
 
-class addedInfosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,
-UICollectionViewDelegate, UICollectionViewDataSource {
+class addedInfosViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     private var _pictureOptionals: UIImagePickerController = UIImagePickerController()
     private var _touchToSelectPicture: UITapGestureRecognizer = UITapGestureRecognizer()
+    
+    public var cardsRegistered: [Card] = []
+    public var totalCards: Int = 0
 
-    public  var totalCards: Int = 0
-    public  var cadsRegistered: Array<NSMutableDictionary> = []
-
-    @IBOutlet weak var addElement_button: ACButton!
     @IBOutlet weak var cardName_textField: ACTextField!
     @IBOutlet weak var pictureGame_image: UIImageView!
     @IBOutlet weak var selectPicture_button: ACButton!
-    @IBOutlet weak var registeredSaved: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         _touchToSelectPicture = UITapGestureRecognizer(target: self, action: #selector(addedInfosViewController.displayOptionalsPicture(_:)))
         self.selectPicture_button.addGestureRecognizer(_touchToSelectPicture)
         
         _pictureOptionals.delegate = self
         _pictureOptionals.allowsEditing = false
         
-        pictureGame_image.layer.cornerRadius = 7
+        pictureGame_image.layer.cornerRadius = 125/2
         pictureGame_image.layer.masksToBounds = true
         pictureGame_image.layer.borderColor = UIColor.white.cgColor
         pictureGame_image.layer.borderWidth = 1.0
-        
-        self.registeredSaved.reloadSections(IndexSet(integer: 0))
     }
 
     // added image selected
@@ -44,6 +40,7 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         let auxImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         let pngImage = UIImagePNGRepresentation(auxImage)
         
+        self.pictureGame_image.contentMode = .scaleAspectFit
         self.pictureGame_image.image = UIImage(data: pngImage!)
         self.dismiss(animated: true, completion: nil)
     }
@@ -74,47 +71,28 @@ UICollectionViewDelegate, UICollectionViewDataSource {
         alert.popoverPresentationController?.sourceView = self.view
         self.present(alert, animated: true, completion: nil)
     }
+
+    @IBAction func back_button(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true);
+    }
     
-    // Collection View functions
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cadsRegistered.count
+    
+    @IBAction func backHome_button(_ sender: Any) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "registeredCardCV", for: indexPath) as! addedInfosCollectionViewCell
-        
-        cell.displayContent(numberCard: "\(self.cadsRegistered.count)")
-
-        return cell
-    }
-
-    // buttons actions
-    @IBAction func removeElement(_ sender: Any) {
-        if self.cadsRegistered.count > 0 {
-            self.cadsRegistered.removeLast()
-        }
-        if self.cadsRegistered.count != totalCards {
-            addElement_button.setTitle("ADICIONAR", for: .normal)
-        }
-    }
-
-    @IBAction func addElement(_ sender: Any) {
-        if addElement_button.currentTitle != "PRÓXIMO PASSO" {
-            let element: NSMutableDictionary = NSMutableDictionary()
-            
-            if (self.cardName_textField != nil) && (self.cardName_textField.text != nil) {
-                element.setValue(self.cardName_textField.text, forKey: "name")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let CardsRegisteredViewController = segue.destination as? CardsRegisteredViewController {
+            if (self.cardName_textField != nil) && (self.cardName_textField.text != nil)
+                && (self.pictureGame_image != nil) && (self.pictureGame_image.image != nil) {
+                
+                cardsRegistered.append(Card(title: self.cardName_textField.text, image: self.pictureGame_image.image))
+                
+                for card in cardsRegistered {
+                    CardsRegisteredViewController.cardsRegistered.append(card)
+                }
             }
-            if (self.pictureGame_image != nil) && (self.pictureGame_image.image != nil) {
-                element.setValue(self.pictureGame_image.image, forKey: "image")
-            }
-            
-            self.cadsRegistered.append(element)
-            self.registeredSaved.reloadSections(IndexSet(integer: 0))
-
-            if self.cadsRegistered.count == totalCards {
-                addElement_button.setTitle("PRÓXIMO PASSO", for: .normal)
-            }
+            CardsRegisteredViewController.numberCardsWants = totalCards
         }
     }
 }

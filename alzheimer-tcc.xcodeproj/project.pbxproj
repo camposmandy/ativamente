@@ -15,7 +15,10 @@
 		3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990A2066C91000CBD346 /* createGameViewController.swift */; };
 		3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */; };
 		37889F152058BB2400389D80 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37889F142058BB2400389D80 /* GradientView.swift */; };
-		37B8DF972079B48F00571218 /* addedInfosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */; };
+		37B8DF972079B48F00571218 /* CardRegisteredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */; };
+		37B8DF992079CD0500571218 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF982079CD0500571218 /* Card.swift */; };
+		37B8DF9B207AD14800571218 /* CardsRegisteredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF9A207AD14800571218 /* CardsRegisteredViewController.swift */; };
+		37B8DF9F207EEEDC00571218 /* SaveNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */; };
 		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
 		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +34,10 @@
 		3728990A2066C91000CBD346 /* createGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGameViewController.swift; sourceTree = "<group>"; };
 		3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosViewController.swift; sourceTree = "<group>"; };
 		37889F142058BB2400389D80 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosCollectionViewCell.swift; sourceTree = "<group>"; };
+		37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisteredCollectionViewCell.swift; sourceTree = "<group>"; };
+		37B8DF982079CD0500571218 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		37B8DF9A207AD14800571218 /* CardsRegisteredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsRegisteredViewController.swift; sourceTree = "<group>"; };
+		37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewGameViewController.swift; sourceTree = "<group>"; };
 		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
 		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +72,7 @@
 		37088F58204A53EC0010657B /* alzheimer-tcc */ = {
 			isa = PBXGroup;
 			children = (
+				37B8DF9D207AD77900571218 /* Struct */,
 				37289909206676B200CBD346 /* Supporting Files */,
 				37C79A8A204C327C00D35D0B /* ViewController */,
 				37C79A8F204C686D00D35D0B /* Resources */,
@@ -87,9 +94,17 @@
 		37B8DF952079B43D00571218 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				37B8DF962079B48F00571218 /* addedInfosCollectionViewCell.swift */,
+				37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */,
 			);
 			name = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		37B8DF9D207AD77900571218 /* Struct */ = {
+			isa = PBXGroup;
+			children = (
+				37B8DF982079CD0500571218 /* Card.swift */,
+			);
+			name = Struct;
 			sourceTree = "<group>";
 		};
 		37C79A8A204C327C00D35D0B /* ViewController */ = {
@@ -100,6 +115,8 @@
 				37C79A8B204C330E00D35D0B /* levelViewController.swift */,
 				3728990A2066C91000CBD346 /* createGameViewController.swift */,
 				3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */,
+				37B8DF9A207AD14800571218 /* CardsRegisteredViewController.swift */,
+				37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -141,7 +158,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Amanda Campos";
 				TargetAttributes = {
 					37088F55204A53EB0010657B = {
@@ -188,9 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B8DF9F207EEEDC00571218 /* SaveNewGameViewController.swift in Sources */,
 				37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */,
-				37B8DF972079B48F00571218 /* addedInfosCollectionViewCell.swift in Sources */,
+				37B8DF972079B48F00571218 /* CardRegisteredCollectionViewCell.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
+				37B8DF992079CD0500571218 /* Card.swift in Sources */,
+				37B8DF9B207AD14800571218 /* CardsRegisteredViewController.swift in Sources */,
 				3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */,
 				37889F152058BB2400389D80 /* GradientView.swift in Sources */,
 				37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */,
@@ -230,7 +250,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -238,7 +260,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -280,7 +307,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -288,7 +317,12 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

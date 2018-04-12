@@ -14,28 +14,27 @@ class createGameViewController: UIViewController {
 
     @IBOutlet weak var numberCards_button: ACButton!
     
+    // Actions button
     @IBAction func plusCards_button(_ sender: Any) {
         if _numberCards < 6 {
             _numberCards += 1
             numberCards_button.setTitle("\(_numberCards)", for: .normal)
         }
     }
-    
     @IBAction func lessCards_button(_ sender: Any) {
         if _numberCards > 2  {
             _numberCards -= 1
             numberCards_button.setTitle("\(_numberCards)", for: .normal)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+
+    @IBAction func back_button(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true);
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if let addedInfosVC = segue.destination as? addedInfosViewController {
-            addedInfosVC.totalCards = _numberCards
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let AddedInfosViewController = segue.destination as? addedInfosViewController {
+            AddedInfosViewController.totalCards = _numberCards
         }
     }
 }
