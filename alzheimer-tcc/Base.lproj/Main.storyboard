@@ -834,6 +834,9 @@
                                                                     <real key="value" value="17"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="teste:" destination="Xq3-cN-QAD" eventType="touchUpInside" id="jaN-Fx-fTX"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </view>

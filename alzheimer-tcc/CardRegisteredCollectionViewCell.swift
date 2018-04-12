@@ -13,7 +13,7 @@ class CardRegisteredCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nameCardRegistered_label: UILabel!
     @IBOutlet weak var imageCardRegistered_image: UIImageView!
     
-    public func displayContent (nameCard: String, imageCard: UIImage) {
+    public func displayContent(nameCard: String, imageCard: UIImage) {
         self.nameCardRegistered_label.text = nameCard
         self.imageCardRegistered_image.image = imageCard
     }

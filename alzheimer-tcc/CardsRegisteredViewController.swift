@@ -12,6 +12,7 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
 
     private let reuseIdentifierCell = "cardRegistered"
     private let nextStep = "PRÓXIMO PASSO"
+    private let lastStep = "ADICIONAR"
     private let identifierAddedInfos = "AddedCard"
     private let identifierSaveGame = "SaveGame"
 
@@ -41,7 +42,7 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierCell, for: indexPath) as? CardRegisteredCollectionViewCell
-
+        
             cell?.displayContent(nameCard: cardsRegistered[indexPath.row].title!, imageCard: cardsRegistered[indexPath.row].image!)
 
         return cell!
@@ -63,6 +64,19 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
         self.navigationController?.popToRootViewController(animated: true)
     }
 
+    @IBAction func teste(_ sender: Any) {
+        let buttonPosition = (sender as AnyObject).convert(CGPoint.zero, to: self.cardsRegistered_CollectionView)
+        let indexCard = self.cardsRegistered_CollectionView.indexPathForItem(at: buttonPosition)?.row
+
+        cardsRegistered.remove(at: indexCard!)
+
+        if actionFlex_button.currentTitle == nextStep {
+            actionFlex_button.setTitle(lastStep, for: .normal)
+        }
+
+        self.cardsRegistered_CollectionView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == identifierAddedInfos {
             let AddedInfosViewController = segue.destination as! addedInfosViewController
