@@ -1,0 +1,6 @@
+framework module Pods_alzheimer_tcc {
+  umbrella header "Pods-alzheimer-tcc-umbrella.h"
+
+  export *
+  module * { export * }
+}

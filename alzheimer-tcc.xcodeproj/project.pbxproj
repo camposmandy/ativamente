@@ -21,6 +21,7 @@
 		37B8DF9F207EEEDC00571218 /* SaveNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */; };
 		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
 		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
+		A2E2289B7F1D3689BAEF5023 /* Pods_alzheimer_tcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,9 @@
 		37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewGameViewController.swift; sourceTree = "<group>"; };
 		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
 		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		484093AABDE432D33D081EF0 /* Pods-alzheimer-tcc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.debug.xcconfig"; sourceTree = "<group>"; };
+		864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alzheimer_tcc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F19A2F6B3C0A13AF6C44393 /* Pods-alzheimer-tcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2E2289B7F1D3689BAEF5023 /* Pods_alzheimer_tcc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DA47D5D0326176DC50BAE79 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				484093AABDE432D33D081EF0 /* Pods-alzheimer-tcc.debug.xcconfig */,
+				8F19A2F6B3C0A13AF6C44393 /* Pods-alzheimer-tcc.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		37088F4D204A53EB0010657B = {
 			isa = PBXGroup;
 			children = (
 				37088F58204A53EC0010657B /* alzheimer-tcc */,
 				37088F57204A53EC0010657B /* Products */,
+				2DA47D5D0326176DC50BAE79 /* Pods */,
+				DE759A22C3DBB5EB2EF6D690 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +147,14 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		DE759A22C3DBB5EB2EF6D690 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37088F68204A53EC0010657B /* Build configuration list for PBXNativeTarget "alzheimer-tcc" */;
 			buildPhases = (
+				C0C4AAE3C400E31A8D70C40F /* [CP] Check Pods Manifest.lock */,
 				37088F52204A53EB0010657B /* Sources */,
 				37088F53204A53EB0010657B /* Frameworks */,
 				37088F54204A53EB0010657B /* Resources */,
+				99695F82B551F5C127CBF5CE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,6 +225,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		99695F82B551F5C127CBF5CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0C4AAE3C400E31A8D70C40F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-alzheimer-tcc-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37088F52204A53EB0010657B /* Sources */ = {
@@ -350,6 +417,7 @@
 		};
 		37088F69204A53EC0010657B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484093AABDE432D33D081EF0 /* Pods-alzheimer-tcc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55Z8HFH9WB;
@@ -364,6 +432,7 @@
 		};
 		37088F6A204A53EC0010657B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F19A2F6B3C0A13AF6C44393 /* Pods-alzheimer-tcc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 55Z8HFH9WB;
