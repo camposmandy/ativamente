@@ -83,15 +83,20 @@ class addedInfosViewController: UIViewController, UIImagePickerControllerDelegat
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let CardsRegisteredViewController = segue.destination as? CardsRegisteredViewController {
-            if (self.cardName_textField != nil) && (self.cardName_textField.text != nil)
-                && (self.pictureGame_image != nil) && (self.pictureGame_image.image != nil) {
+
+            if let imageCard = pictureGame_image.image,
+               let imageData = UIImageJPEGRepresentation(imageCard, 1.0),
+               let nameCard  = cardName_textField.text {
+
+                let cardItem = Card()
+                cardItem.title = nameCard
+                cardItem.image = imageData
                 
-                cardsRegistered.append(Card(title: self.cardName_textField.text, image: self.pictureGame_image.image))
-                
-                for card in cardsRegistered {
-                    CardsRegisteredViewController.cardsRegistered.append(card)
-                }
+                cardsRegistered.append(cardItem)
+            
+                CardsRegisteredViewController.cardsRegistered = cardsRegistered
             }
+
             CardsRegisteredViewController.numberCardsWants = totalCards
         }
     }

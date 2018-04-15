@@ -6,9 +6,11 @@
 //  Copyright © 2018 Amanda Campos. All rights reserved.
 //
 
-import UIKit
+import RealmSwift
+import Foundation
 
-struct Card {
-    var title: String?
-    var image: UIImage?
+class Card: Object {
+    @objc dynamic var title = ""
+    @objc dynamic var image: Data? = nil
+    
 }

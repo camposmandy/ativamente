@@ -620,10 +620,10 @@
             </objects>
             <point key="canvasLocation" x="-352" y="2831"/>
         </scene>
-        <!--View Controller-->
+        <!--All Games View Controller-->
         <scene sceneID="ZUb-2A-u0U">
             <objects>
-                <viewController id="fde-Wc-LWj" sceneMemberID="viewController">
+                <viewController id="fde-Wc-LWj" customClass="AllGamesViewController" customModule="alzheimer_tcc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BbF-yK-tqj"/>
                         <viewControllerLayoutGuide type="bottom" id="F3k-34-TWx"/>
@@ -970,6 +970,9 @@
                                                 <real key="value" value="17"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="saveGame:" destination="yeI-7g-nQR" eventType="touchUpInside" id="aue-Uy-rxL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -982,6 +985,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="gameName_textField" destination="8hu-gL-K67" id="7Ib-RG-XPE"/>
+                        <outlet property="saveGame_button" destination="US0-m7-Nct" id="4ck-l2-J8A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hQ-Fr-Q5j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

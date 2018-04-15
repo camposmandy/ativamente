@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class CardsRegisteredViewController: UIViewController, UICollectionViewDataSource {
 
@@ -30,11 +31,6 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // Collection View Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardsRegistered.count
@@ -43,7 +39,12 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifierCell, for: indexPath) as? CardRegisteredCollectionViewCell
         
-            cell?.displayContent(nameCard: cardsRegistered[indexPath.row].title!, imageCard: cardsRegistered[indexPath.row].image!)
+        if let imageData = cardsRegistered[indexPath.row].image, let imageCard = UIImage(data: imageData) {
+            cell?.displayContent(
+                nameCard: cardsRegistered[indexPath.row].title,
+                imageCard: imageCard
+            )
+        }
 
         return cell!
     }
@@ -86,9 +87,9 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
             }
             
             AddedInfosViewController.totalCards = numberCardsWants
-        } else {
-            // save game
+        } else if segue.identifier == identifierSaveGame {
             let SaveNewGameViewController = segue.destination as! SaveNewGameViewController
+            SaveNewGameViewController.gameCards = cardsRegistered
         }
     }
     
