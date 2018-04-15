@@ -21,6 +21,10 @@
 		37B8DF9F207EEEDC00571218 /* SaveNewGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */; };
 		37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8B204C330E00D35D0B /* levelViewController.swift */; };
 		37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C79A8D204C686600D35D0B /* DesignableView.swift */; };
+		37DC0D122082DF190033D221 /* CardsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D112082DF190033D221 /* CardsManager.swift */; };
+		37DC0D152082E05C0033D221 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D142082E05C0033D221 /* Game.swift */; };
+		37DC0D172082F1E90033D221 /* AllGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D162082F1E90033D221 /* AllGamesViewController.swift */; };
+		37DC0D192082F2920033D221 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D182082F2920033D221 /* GameManager.swift */; };
 		A2E2289B7F1D3689BAEF5023 /* Pods_alzheimer_tcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveNewGameViewController.swift; sourceTree = "<group>"; };
 		37C79A8B204C330E00D35D0B /* levelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levelViewController.swift; sourceTree = "<group>"; };
 		37C79A8D204C686600D35D0B /* DesignableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		37DC0D112082DF190033D221 /* CardsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsManager.swift; sourceTree = "<group>"; };
+		37DC0D142082E05C0033D221 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		37DC0D162082F1E90033D221 /* AllGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesViewController.swift; sourceTree = "<group>"; };
+		37DC0D182082F2920033D221 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		484093AABDE432D33D081EF0 /* Pods-alzheimer-tcc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.debug.xcconfig"; sourceTree = "<group>"; };
 		864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alzheimer_tcc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F19A2F6B3C0A13AF6C44393 /* Pods-alzheimer-tcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +96,7 @@
 		37088F58204A53EC0010657B /* alzheimer-tcc */ = {
 			isa = PBXGroup;
 			children = (
+				37DC0D132082DF1F0033D221 /* Manager */,
 				37B8DF9D207AD77900571218 /* Struct */,
 				37289909206676B200CBD346 /* Supporting Files */,
 				37C79A8A204C327C00D35D0B /* ViewController */,
@@ -119,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				37B8DF982079CD0500571218 /* Card.swift */,
+				37DC0D142082E05C0033D221 /* Game.swift */,
 			);
 			name = Struct;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 				3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */,
 				37B8DF9A207AD14800571218 /* CardsRegisteredViewController.swift */,
 				37B8DF9E207EEEDC00571218 /* SaveNewGameViewController.swift */,
+				37DC0D162082F1E90033D221 /* AllGamesViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -145,6 +156,15 @@
 				37889F142058BB2400389D80 /* GradientView.swift */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		37DC0D132082DF1F0033D221 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				37DC0D112082DF190033D221 /* CardsManager.swift */,
+				37DC0D182082F2920033D221 /* GameManager.swift */,
+			);
+			name = Manager;
 			sourceTree = "<group>";
 		};
 		DE759A22C3DBB5EB2EF6D690 /* Frameworks */ = {
@@ -275,12 +295,16 @@
 				37B8DF9F207EEEDC00571218 /* SaveNewGameViewController.swift in Sources */,
 				37C79A8E204C686600D35D0B /* DesignableView.swift in Sources */,
 				37B8DF972079B48F00571218 /* CardRegisteredCollectionViewCell.swift in Sources */,
+				37DC0D152082E05C0033D221 /* Game.swift in Sources */,
+				37DC0D192082F2920033D221 /* GameManager.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
 				37B8DF992079CD0500571218 /* Card.swift in Sources */,
 				37B8DF9B207AD14800571218 /* CardsRegisteredViewController.swift in Sources */,
 				3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */,
 				37889F152058BB2400389D80 /* GradientView.swift in Sources */,
+				37DC0D172082F1E90033D221 /* AllGamesViewController.swift in Sources */,
 				37088F5A204A53EC0010657B /* AppDelegate.swift in Sources */,
+				37DC0D122082DF190033D221 /* CardsManager.swift in Sources */,
 				37C79A8C204C330E00D35D0B /* levelViewController.swift in Sources */,
 				3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */,
 			);
