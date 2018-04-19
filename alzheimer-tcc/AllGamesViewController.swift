@@ -9,13 +9,34 @@
 import UIKit
 import RealmSwift
 
-class AllGamesViewController: UIViewController {
+class AllGamesViewController: UIViewController, UICollectionViewDataSource {
+
+    @IBOutlet weak var allGames_collectionView: UICollectionView!
+    private var games: Results<Game>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let games =  GamesManager.shared.getAllGames
-        print(games.count, "jogos criados")
+        games =  GamesManager.shared.getAllGames
+        print("total jogos: ", games.count)
 
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return games.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "gameRegistered", for: indexPath) as? GameRegisteredCollectionViewCell
+        
+        let currentGame = games[indexPath.row]
+        cell?.displayContent(title: currentGame.title)
+        
+        return cell!
+    }
+
+    
+    @IBAction func displayGame(_ sender: Any) {
+        
     }
 }
