@@ -27,6 +27,7 @@
 		37DC0D192082F2920033D221 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D182082F2920033D221 /* GameManager.swift */; };
 		37DC0D1B20839D3C0033D221 /* GameRegisteredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D1A20839D3C0033D221 /* GameRegisteredCollectionViewCell.swift */; };
 		37DC0D1D208818F40033D221 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D1C208818F40033D221 /* GameViewController.swift */; };
+		37DC0D1F208971820033D221 /* GameSelectedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37DC0D1E208971820033D221 /* GameSelectedCollectionViewCell.swift */; };
 		A2E2289B7F1D3689BAEF5023 /* Pods_alzheimer_tcc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		37DC0D182082F2920033D221 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		37DC0D1A20839D3C0033D221 /* GameRegisteredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRegisteredCollectionViewCell.swift; sourceTree = "<group>"; };
 		37DC0D1C208818F40033D221 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		37DC0D1E208971820033D221 /* GameSelectedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectedCollectionViewCell.swift; sourceTree = "<group>"; };
 		484093AABDE432D33D081EF0 /* Pods-alzheimer-tcc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.debug.xcconfig"; sourceTree = "<group>"; };
 		864C97158330A21E61BC56D7 /* Pods_alzheimer_tcc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alzheimer_tcc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F19A2F6B3C0A13AF6C44393 /* Pods-alzheimer-tcc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alzheimer-tcc.release.xcconfig"; path = "Pods/Target Support Files/Pods-alzheimer-tcc/Pods-alzheimer-tcc.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */,
 				37DC0D1A20839D3C0033D221 /* GameRegisteredCollectionViewCell.swift */,
+				37DC0D1E208971820033D221 /* GameSelectedCollectionViewCell.swift */,
 			);
 			name = CollectionViewCell;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				37DC0D152082E05C0033D221 /* Game.swift in Sources */,
 				37DC0D192082F2920033D221 /* GameManager.swift in Sources */,
 				37DC0D1D208818F40033D221 /* GameViewController.swift in Sources */,
+				37DC0D1F208971820033D221 /* GameSelectedCollectionViewCell.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
 				37B8DF992079CD0500571218 /* Card.swift in Sources */,
 				37B8DF9B207AD14800571218 /* CardsRegisteredViewController.swift in Sources */,

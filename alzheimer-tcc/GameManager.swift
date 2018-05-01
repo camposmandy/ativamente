@@ -24,4 +24,8 @@ class GamesManager {
             return realm.objects(Game.self)
         }
     }
+    
+    public func findGame(filter: String) -> Results<Game> {
+        return realm.objects(Game.self).filter(filter)
+    }
 }

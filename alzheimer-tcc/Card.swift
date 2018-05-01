@@ -12,5 +12,5 @@ import Foundation
 class Card: Object {
     @objc dynamic var title = ""
     @objc dynamic var image: Data? = nil
-    
+    @objc dynamic var idCard: String = ""
 }

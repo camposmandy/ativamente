@@ -44,6 +44,11 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
                 nameCard: cardsRegistered[indexPath.row].title,
                 imageCard: imageCard
             )
+            
+            cell?.imageCardRegistered_image.layer.cornerRadius = 150/2
+            cell?.imageCardRegistered_image.layer.masksToBounds = true
+            cell?.imageCardRegistered_image.layer.borderColor = UIColor.white.cgColor
+            cell?.imageCardRegistered_image.layer.borderWidth = 1.0
         }
 
         return cell!

@@ -23,10 +23,14 @@ class SaveNewGameViewController: UIViewController {
     @IBAction func saveGame(_ sender: Any) {
         if let titleGame = gameName_textField.text {
             let game: Game = Game()
+            var index: Int = 0
 
             game.title = titleGame
             for card in gameCards {
+                card.idCard = "\(index)"
                 game.cards.append(card)
+                game.cards.append(card)
+                index += 1
             }
 
             let realm = try! Realm()

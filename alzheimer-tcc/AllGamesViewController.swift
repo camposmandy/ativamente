@@ -13,12 +13,18 @@ class AllGamesViewController: UIViewController, UICollectionViewDataSource {
 
     @IBOutlet weak var allGames_collectionView: UICollectionView!
     private var games: Results<Game>!
+    private var gameSelected: Game!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         games =  GamesManager.shared.getAllGames
-        print("total jogos: ", games.count)
+//
+//        let realm = try! Realm()
+//
+//        for game in games {
+//            realm.delete(game)
+//        }
 
     }
     
@@ -37,6 +43,14 @@ class AllGamesViewController: UIViewController, UICollectionViewDataSource {
 
     
     @IBAction func displayGame(_ sender: Any) {
-        
+        let touchArea = (sender as AnyObject).convert(CGPoint.zero, to: allGames_collectionView)
+        if let index = allGames_collectionView.indexPathForItem(at: touchArea)?.row {
+            gameSelected = games[index]
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let GameViewController = segue.destination as! GameViewController
+        GameViewController.game = gameSelected
     }
 }

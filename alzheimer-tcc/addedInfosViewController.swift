@@ -37,9 +37,11 @@ class addedInfosViewController: UIViewController, UIImagePickerControllerDelegat
 
     // added image selected
     @objc func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let auxImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        var auxImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        auxImage = auxImage.convert(toSize:CGSize(width: 100.0, height: 100.0), scale: UIScreen.main.scale)
+
         let pngImage = UIImagePNGRepresentation(auxImage)
-        
+
         self.pictureGame_image.contentMode = .scaleAspectFit
         self.pictureGame_image.image = UIImage(data: pngImage!)
         self.dismiss(animated: true, completion: nil)
@@ -93,7 +95,7 @@ class addedInfosViewController: UIViewController, UIImagePickerControllerDelegat
                 cardItem.image = imageData
                 
                 cardsRegistered.append(cardItem)
-            
+
                 CardsRegisteredViewController.cardsRegistered = cardsRegistered
             }
 

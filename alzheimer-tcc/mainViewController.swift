@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class mainViewController: UIViewController {
 
@@ -22,7 +23,6 @@ class mainViewController: UIViewController {
         gradient.colors = [UIColor.init(red: 150, green: 201, blue: 61, alpha: 0.8), UIColor.init(red: 0, green: 176, blue: 155, alpha: 0.8)];
         
         view.layer.insertSublayer(gradient, at: 0);
-
     }
 
     override func didReceiveMemoryWarning() {
