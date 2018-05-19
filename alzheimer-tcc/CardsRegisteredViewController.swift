@@ -20,6 +20,9 @@ class CardsRegisteredViewController: UIViewController, UICollectionViewDataSourc
     public var cardsRegistered: [Card] = []
     public var numberCardsWants: Int = 0
 
+    @IBAction func oidaijda() {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBOutlet weak var actionFlex_button: ACButton!
     @IBOutlet weak var cardsRegistered_CollectionView: UICollectionView!
 

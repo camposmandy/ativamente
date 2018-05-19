@@ -20,6 +20,14 @@ class SaveNewGameViewController: UIViewController {
         
     }
 
+    @IBAction func backRootButtonTapped() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @IBAction func backButtonTapped() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func saveGame(_ sender: Any) {
         if let titleGame = gameName_textField.text {
             let game: Game = Game()

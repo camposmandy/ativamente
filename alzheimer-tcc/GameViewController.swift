@@ -10,24 +10,46 @@ import UIKit
 
 class GameViewController: UIViewController, UICollectionViewDataSource {
 
-    public var game: Game!
-    public var countFounders: Int = 0
-    private var cardsGame: [Card] = []
     @IBOutlet weak var game_CollectionView: UICollectionView!
+    @IBOutlet weak var congratulates_label: UILabel!
     
+    public var game: Game!
+    public var level: Level?
+
     private var count = 0
     private var arrIndexPath = [IndexPath(row: 0, section: 2)]
     private var arrIndexItem = [Int()]
+    private var cardsGame: [Card] = []
     private let correct_image = #imageLiteral(resourceName: "verified-card")
+    private var countFounds: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        arrIndexItem = []
+
+        if let lvl = level {
+            switch lvl {
+                case .easy:
+                    game = CardsGenerated().randomCards(totalCards: 2)
+                    break
+                case .medium:
+                    game = CardsGenerated().randomCards(totalCards: 4)
+                    break
+                case .difficult:
+                    game = CardsGenerated().randomCards(totalCards: 6)
+                    break
+            }
+        }
         cardsGame = shuffleArray(Array(game.cards))
     }
 
     @IBAction func backButtonTapped() {
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func backRootButtonTapped() {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -39,12 +61,7 @@ class GameViewController: UIViewController, UICollectionViewDataSource {
 
         cell?.labelGame.text = cardsGame[indexPath.row].title
         cell?.labelId.text = cardsGame[indexPath.row].idCard
-        
         cell?.imageGame.image = UIImage(data: cardsGame[indexPath.row].image!)
-        cell?.imageGame.layer.cornerRadius = 150/2
-        cell?.imageGame.layer.masksToBounds = true
-        cell?.imageGame.layer.borderColor = UIColor.white.cgColor
-        cell?.imageGame.layer.borderWidth = 1.0
 
         cell?.imageGame.alpha = 0
         cell?.labelGame.alpha = 0
@@ -64,22 +81,21 @@ class GameViewController: UIViewController, UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
+        CardsGenerated().tocarmusica(music: "Memorizando")
         collectionView.isUserInteractionEnabled = false
         
         arrIndexPath.append(indexPath)
         arrIndexItem.append(indexPath.row)
         count += 1
         
-//        for i in arrIndexPath {
-            let cell = collectionView.cellForItem(at: indexPath) as? GameSelectedCollectionViewCell
-            cell?.imageGame.alpha = 1
-            cell?.labelGame.alpha = 1
-            cell?.isUserInteractionEnabled = false
+        let cell = collectionView.cellForItem(at: indexPath) as? GameSelectedCollectionViewCell
+        cell?.imageGame.alpha = 1
+        cell?.labelGame.alpha = 1
+        cell?.isUserInteractionEnabled = false
         
         if count == 2 {
             // correct items?
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.validCards()
             }
         } else {
@@ -88,26 +104,37 @@ class GameViewController: UIViewController, UICollectionViewDataSource {
     }
     
     func validCards() {
-        
         if self.cardsGame[(arrIndexItem.first)!].idCard == self.cardsGame[(arrIndexItem.last)!].idCard  {
-            countFounders+=2
+            countFounds+=2
 
-            if countFounders == cardsGame.count {
-                // ganhou jogo
+            if countFounds == cardsGame.count {
+                // win game
                 for i in self.arrIndexPath {
                     let cell = self.game_CollectionView.cellForItem(at: i) as? GameSelectedCollectionViewCell
                     cell?.tag = 100
+                    cell?.layer.borderColor = UIColor.yellow.cgColor
+                    cell?.labelGame.textColor = UIColor.yellow
                     cell?.imageGame.image = correct_image
                     cell?.labelGame.text = "CORRETO"
+
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        cell?.alpha = 0
+                        self.congratulates_label.alpha = 1
+                    }
                 }
 
             } else {
-                //encontrou um par
+                // found card
                 for i in self.arrIndexPath {
                     let cell = self.game_CollectionView.cellForItem(at: i) as? GameSelectedCollectionViewCell
                     cell?.tag = 100
+                    cell?.layer.borderColor = UIColor.yellow.cgColor
+                    cell?.labelGame.textColor = UIColor.yellow
                     cell?.imageGame.image = correct_image
                     cell?.labelGame.text = "CORRETO"
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                        cell?.alpha = 0
+                    }
                 }
             }
         } else {

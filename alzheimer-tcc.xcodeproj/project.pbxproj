@@ -11,9 +11,11 @@
 		37088F5C204A53EC0010657B /* mainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37088F5B204A53EC0010657B /* mainViewController.swift */; };
 		37088F5F204A53EC0010657B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F5D204A53EC0010657B /* Main.storyboard */; };
 		37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37088F62204A53EC0010657B /* LaunchScreen.storyboard */; };
-		37088F6D204BB7F50010657B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37088F6B204BB7F50010657B /* Assets.xcassets */; };
 		3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990A2066C91000CBD346 /* createGameViewController.swift */; };
 		3728990D2066CE1E00CBD346 /* addedInfosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */; };
+		37319963209FDB1800987ADE /* Memorizando.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 37319962209FDB1700987ADE /* Memorizando.mp3 */; };
+		375D9F462098ECF2000D7388 /* CardsGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375D9F452098ECF2000D7388 /* CardsGenerated.swift */; };
+		375D9F4820990648000D7388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375D9F4720990648000D7388 /* Assets.xcassets */; };
 		37889F152058BB2400389D80 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37889F142058BB2400389D80 /* GradientView.swift */; };
 		37B8DF972079B48F00571218 /* CardRegisteredCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */; };
 		37B8DF992079CD0500571218 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B8DF982079CD0500571218 /* Card.swift */; };
@@ -38,9 +40,11 @@
 		37088F5E204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37088F63204A53EC0010657B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37088F65204A53EC0010657B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37088F6B204BB7F50010657B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3728990A2066C91000CBD346 /* createGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createGameViewController.swift; sourceTree = "<group>"; };
 		3728990C2066CE1E00CBD346 /* addedInfosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addedInfosViewController.swift; sourceTree = "<group>"; };
+		37319962209FDB1700987ADE /* Memorizando.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Memorizando.mp3; sourceTree = "<group>"; };
+		375D9F452098ECF2000D7388 /* CardsGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsGenerated.swift; sourceTree = "<group>"; };
+		375D9F4720990648000D7388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37889F142058BB2400389D80 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		37B8DF962079B48F00571218 /* CardRegisteredCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisteredCollectionViewCell.swift; sourceTree = "<group>"; };
 		37B8DF982079CD0500571218 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				37088F65204A53EC0010657B /* Info.plist */,
 				37088F5D204A53EC0010657B /* Main.storyboard */,
 				37088F59204A53EC0010657B /* AppDelegate.swift */,
+				375D9F452098ECF2000D7388 /* CardsGenerated.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -160,8 +165,9 @@
 		37C79A8F204C686D00D35D0B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37319962209FDB1700987ADE /* Memorizando.mp3 */,
+				375D9F4720990648000D7388 /* Assets.xcassets */,
 				37C79A8D204C686600D35D0B /* DesignableView.swift */,
-				37088F6B204BB7F50010657B /* Assets.xcassets */,
 				37889F142058BB2400389D80 /* GradientView.swift */,
 			);
 			name = Resources;
@@ -248,7 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				37088F64204A53EC0010657B /* LaunchScreen.storyboard in Resources */,
-				37088F6D204BB7F50010657B /* Assets.xcassets in Resources */,
+				375D9F4820990648000D7388 /* Assets.xcassets in Resources */,
+				37319963209FDB1800987ADE /* Memorizando.mp3 in Resources */,
 				37088F5F204A53EC0010657B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,6 +317,7 @@
 				37DC0D1D208818F40033D221 /* GameViewController.swift in Sources */,
 				37DC0D1F208971820033D221 /* GameSelectedCollectionViewCell.swift in Sources */,
 				37088F5C204A53EC0010657B /* mainViewController.swift in Sources */,
+				375D9F462098ECF2000D7388 /* CardsGenerated.swift in Sources */,
 				37B8DF992079CD0500571218 /* Card.swift in Sources */,
 				37B8DF9B207AD14800571218 /* CardsRegisteredViewController.swift in Sources */,
 				3728990B2066C91000CBD346 /* createGameViewController.swift in Sources */,

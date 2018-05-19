@@ -19,12 +19,6 @@ class AllGamesViewController: UIViewController, UICollectionViewDataSource {
         super.viewDidLoad()
 
         games =  GamesManager.shared.getAllGames
-//
-//        let realm = try! Realm()
-//
-//        for game in games {
-//            realm.delete(game)
-//        }
 
     }
     
@@ -48,6 +42,11 @@ class AllGamesViewController: UIViewController, UICollectionViewDataSource {
             gameSelected = games[index]
         }
     }
+    
+    @IBAction func backRootButtonTapped() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let GameViewController = segue.destination as! GameViewController
